@@ -12,6 +12,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.10.2</junit.version>
+        <app.name>Drawer</app.name>
     </properties>
 
     <dependencies>
@@ -59,10 +60,10 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>io.github.fiecueal.drawerfm/io.github.fiecueal.drawerfm.HelloApplication</mainClass>
-                            <launcher>app</launcher>
-                            <jlinkZipName>app</jlinkZipName>
-                            <jlinkImageName>app</jlinkImageName>
+                            <mainClass>io.github.fiecueal.drawerfm/io.github.fiecueal.drawerfm.Drawer</mainClass>
+                            <launcher>${app.name}</launcher>
+                            <jlinkZipName>${app.name}</jlinkZipName>
+                            <jlinkImageName>${app.name}</jlinkImageName>
                             <noManPages>true</noManPages>
                             <stripDebug>true</stripDebug>
                             <noHeaderFiles>true</noHeaderFiles>

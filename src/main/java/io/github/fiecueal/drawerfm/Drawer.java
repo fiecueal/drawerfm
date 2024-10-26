@@ -7,14 +7,19 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class Drawer extends Application {
+    public static final String HOME_DIR = System.getProperty("user.home");
+
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        FXMLLoader loader = new FXMLLoader(Drawer.class.getResource("files-view.fxml"));
+        Scene scene = new Scene(loader.load(), 1280, 720);
+        stage.setTitle("Drawer");
         stage.setScene(scene);
         stage.show();
+
+        FilesController fc = loader.getController();
+        fc.fillFileList(HOME_DIR);
     }
 
     public static void main(String[] args) {
