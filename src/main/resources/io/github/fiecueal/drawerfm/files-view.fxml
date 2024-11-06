@@ -5,5 +5,5 @@
 
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="io.github.fiecueal.drawerfm.FilesController">
-    <ListView fx:id="files"/>
+    <ListView fx:id="fileNamesView"/>
 </VBox>

@@ -8,8 +8,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Drawer extends Application {
-    public static final String HOME_DIR = System.getProperty("user.home");
-
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader loader = new FXMLLoader(Drawer.class.getResource("files-view.fxml"));
@@ -17,12 +15,11 @@ public class Drawer extends Application {
         stage.setTitle("Drawer");
         stage.setScene(scene);
         stage.show();
-
-        FilesController fc = loader.getController();
-        fc.fillFileList(HOME_DIR);
     }
 
     public static void main(String[] args) {
+        //TODO allow app to open to any directory by default via config file/command line args
+        // State.currentDir(args.initialDir);
         launch();
     }
 }
